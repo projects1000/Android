@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "My Application01"
+rootProject.name = "Mind Game"
 include(":app")
