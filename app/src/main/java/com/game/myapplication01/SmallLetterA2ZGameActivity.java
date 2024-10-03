@@ -317,6 +317,10 @@ public class SmallLetterA2ZGameActivity extends AppCompatActivity {
         currentLetter = 'a';
         mainLayout.removeAllViews();
         generateButtons();
+
+        if (backgroundMusicPlayer != null && !backgroundMusicPlayer.isPlaying()) {
+            backgroundMusicPlayer.start();
+        }
     }
 
     @Override

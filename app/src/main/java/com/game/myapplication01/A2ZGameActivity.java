@@ -257,6 +257,10 @@ public class A2ZGameActivity extends AppCompatActivity {
         currentLetter = 'A';
         mainLayout.removeAllViews();
         generateButtons();
+
+        if (backgroundMusicPlayer != null && !backgroundMusicPlayer.isPlaying()) {
+            backgroundMusicPlayer.start();
+        }
     }
 
     private void showErrorDialog(final char correctLetter) {
