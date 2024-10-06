@@ -10,8 +10,8 @@ android {
         applicationId = "com.game.myapplication01"
         minSdk = 24
         targetSdk = 34
-        versionCode = 6
-        versionName = "1.6"
+        versionCode = 7
+        versionName = "1.7"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 

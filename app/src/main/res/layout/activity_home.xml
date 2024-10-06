@@ -4,8 +4,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ambassador"
+    android:background="@drawable/insidegame"
     android:padding="16dp">
+
+    <!-- ImageView for ambasodor image -->
+    <ImageView
+        android:id="@+id/ambasodorImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ambasodor"
+        android:scaleType="centerInside"
+        android:alpha="0.5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4" /> <!-- Horizontal bias shifted to the left -->
 
     <!-- Welcome Text ("Welcome to") -->
     <TextView
@@ -14,8 +28,9 @@
         android:layout_height="wrap_content"
         android:text="Welcome to"
         android:textSize="36sp"
-        android:textColor="#8B4513"
+        android:textColor="#FFFFFF"
         android:shadowColor="#000000"
+        android:background="#000000"
         android:shadowDx="2"
         android:shadowDy="2"
         android:shadowRadius="3"
@@ -23,55 +38,45 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"/>
+        app:layout_constraintHorizontal_bias="0.5" />
 
     <!-- Mind Game Text ("Mind Game") -->
     <TextView
         android:id="@+id/mindGameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mind Game"
+        android:text="MindGame"
         android:textSize="44sp"
-        android:textColor="#8B4513"
         android:shadowColor="#000000"
         android:shadowDx="2"
         android:shadowDy="2"
+        android:textColor="#FFFFFF"
+        android:background="#000000"
         android:shadowRadius="4"
         android:textStyle="bold"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/welcomeText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"/>
+        app:layout_constraintHorizontal_bias="0.5" />
 
-    <!-- Button to Start Learn Capital A to Z -->
+    <!-- Go Inside Button positioned at the bottom -->
     <Button
-        android:id="@+id/btnLearnCapital"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="Learn Capital A to Z"
-        android:textSize="20sp"
+        android:id="@+id/goInsideButton"
+        android:layout_width="237dp"
+        android:layout_height="76dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/button_curved"
+        android:letterSpacing="0.2"
+        android:padding="10dp"
+        android:text="START"
         android:textColor="#FFFFFF"
-        android:background="#8B4513"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnLearnSmall"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-    <!-- Button to Start Learn Small a to z -->
-    <!-- Button to Start Learn Small a to z -->
-    <Button
-        android:id="@+id/btnLearnSmall"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="Learn Small a to z"
-        android:textSize="20sp"
-        android:textColor="#FFFFFF"
-        android:background="#8B4513"
-        android:layout_marginTop="8dp"
+        android:textSize="40sp"
+        android:textStyle="bold|italic"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:textAllCaps="false"/>  <!-- Add this line -->
+        android:layout_marginBottom="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

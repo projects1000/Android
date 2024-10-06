@@ -13,26 +13,37 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);  // Ensure this is activity_home.xml
 
-        Button btnStartGame = findViewById(R.id.btnLearnCapital);
-        btnStartGame.setOnClickListener(new View.OnClickListener() {
+//        Button btnStartGame = findViewById(R.id.btnLearnCapital);
+//        btnStartGame.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                // Navigate to the A2Z game activity
+//                Intent intent = new Intent(HomeActivity.this, A2ZGameActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//
+//
+//        Button btnLearnSmall = findViewById(R.id.btnLearnSmall);
+//        btnLearnSmall.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                // Navigate to the Small A to Z game activity
+//                Intent intent = new Intent(HomeActivity.this, SmallLetterA2ZGameActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+
+
+        Button goInsideButton = findViewById(R.id.goInsideButton);
+        goInsideButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Navigate to the A2Z game activity
-                Intent intent = new Intent(HomeActivity.this, A2ZGameActivity.class);
+                Intent intent = new Intent(HomeActivity.this, AZListingActivity.class);
                 startActivity(intent);
             }
         });
 
-
-        Button btnLearnSmall = findViewById(R.id.btnLearnSmall);
-        btnLearnSmall.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Navigate to the Small A to Z game activity
-                Intent intent = new Intent(HomeActivity.this, SmallLetterA2ZGameActivity.class);
-                startActivity(intent);
-            }
-        });
 
     }
 }

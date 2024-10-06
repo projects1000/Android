@@ -3,9 +3,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/a2z"
+        android:icon="@mipmap/mindgameico"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/a2z"
+        android:roundIcon="@mipmap/mindgameico"
         android:supportsRtl="true"
         android:theme="@style/Theme.myapplication01">
 
@@ -24,11 +24,13 @@
         <activity
             android:name=".A2ZGameActivity"
             android:exported="false" />
-
+        <activity android:name=".AZListingActivity" />
+        <activity android:name=".OneTo30Activity" />
         <!-- ErrorActivity declaration -->
         <activity
             android:name=".ErrorActivity"
             android:exported="false" />
+
     </application>
 
 </manifest>

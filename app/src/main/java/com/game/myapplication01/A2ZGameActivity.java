@@ -81,9 +81,9 @@ public class A2ZGameActivity extends AppCompatActivity {
             Button button = new Button(this);
             button.setId(View.generateViewId());
             button.setText(String.valueOf(letter));
-            button.setTextSize(32); // Adjusted to be smaller
+            button.setTextSize(38); // Adjusted to be smaller
             button.setTypeface(null, android.graphics.Typeface.BOLD);
-            button.setBackgroundColor(Color.parseColor("#6F4F28"));
+            button.setBackgroundColor(Color.parseColor("#fa5936"));
             button.setTextColor(Color.WHITE);
 
             ConstraintLayout.LayoutParams params = new ConstraintLayout.LayoutParams(buttonSize, buttonSize);
