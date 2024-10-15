@@ -32,6 +32,15 @@ public class AZListingActivity extends AppCompatActivity {
     }
     private void generateButtons() {
 
+        Button identifyObjectsLetterButton = findViewById(R.id.btnIdentifyObjects);
+        identifyObjectsLetterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AZListingActivity.this, IdentifyList.class);
+                startActivity(intent);
+            }
+        });
+
         Button oneto30Button = findViewById(R.id.btnLearn1to30);
         oneto30Button.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -4,25 +4,28 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-public class HomeActivity extends AppCompatActivity {
+public class IdentifyList extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);  // Ensure this is activity_home.xml
+        setContentView(R.layout.idenify_list);
+        generateButtons();
+    }
+    private void generateButtons() {
 
-
-        Button goInsideButton = findViewById(R.id.goInsideButton);
-        goInsideButton.setOnClickListener(new View.OnClickListener() {
+        Button btnAnimals = findViewById(R.id.btnAnimals);
+        btnAnimals.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, AZListingActivity.class);
+                Intent intent = new Intent(IdentifyList.this, IdentifyObjectsActivity.class);
                 startActivity(intent);
             }
         });
 
-
     }
+
 }

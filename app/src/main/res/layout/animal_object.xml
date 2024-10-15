@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border_style"
+    android:padding="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Tiger Image -->
+        <ImageView
+            android:id="@+id/tigerImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/tiger"
+            android:contentDescription="Tiger"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="8dp"/>
+
+        <!-- Dog Image -->
+        <ImageView
+            android:id="@+id/dogImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/dog"
+            android:contentDescription="Dog"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tigerImage"
+            android:layout_margin="8dp"/>
+
+        <!-- Elephant Image -->
+        <ImageView
+            android:id="@+id/elephantImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/elephant"
+            android:contentDescription="Elephant"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/dogImage"
+            android:layout_margin="8dp"/>
+
+        <!-- Horse Image -->
+        <ImageView
+            android:id="@+id/horseImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/horse"
+            android:contentDescription="Horse"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/tigerImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="8dp"/>
+
+        <!-- Cow Image -->
+        <ImageView
+            android:id="@+id/cowImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/cow"
+            android:contentDescription="Cow"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/dogImage"
+            app:layout_constraintStart_toEndOf="@id/horseImage"
+            android:layout_margin="8dp"/>
+
+        <!-- Frog Image -->
+        <ImageView
+            android:id="@+id/frogImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/frog"
+            android:contentDescription="Frog"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/elephantImage"
+            app:layout_constraintStart_toEndOf="@id/cowImage"
+            android:layout_margin="8dp"/>
+
+        <!-- Alligator Image -->
+        <ImageView
+            android:id="@+id/alligatorImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/alligator"
+            android:contentDescription="Alligator"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/horseImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="8dp"/>
+
+        <!-- Additional Images (similar pattern) -->
+        <!-- Use additional ImageViews as needed -->
+        <!-- Anaconda Image -->
+        <ImageView
+            android:id="@+id/anacondaImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/anaconda"
+            android:contentDescription="Anaconda"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/frogImage"
+            app:layout_constraintStart_toEndOf="@id/alligatorImage"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <!-- Antelope Image -->
+        <ImageView
+            android:id="@+id/antelopeImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/antelope"
+            android:contentDescription="Antelope"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/cowImage"
+            app:layout_constraintStart_toEndOf="@id/anacondaImage"
+            android:layout_marginTop="16dp"/>
+        <ImageView
+            android:id="@+id/baboonImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/baboon"
+            android:contentDescription="Baboon"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/antelopeImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <ImageView
+            android:id="@+id/blackPantherImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/blackpanther"
+            android:contentDescription="Black Panther"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/antelopeImage"
+            app:layout_constraintStart_toEndOf="@id/baboonImage"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <ImageView
+            android:id="@+id/buffaloImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/buffalo"
+            android:contentDescription="Buffalo"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/antelopeImage"
+            app:layout_constraintStart_toEndOf="@id/blackPantherImage"
+            android:layout_marginTop="16dp"/>
+
+        <ImageView
+            android:id="@+id/bullImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/bull"
+            android:contentDescription="Bull"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/baboonImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <ImageView
+            android:id="@+id/cheetahImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/cheetah"
+            android:contentDescription="Cheetah"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/baboonImage"
+            app:layout_constraintStart_toEndOf="@id/bullImage"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <ImageView
+            android:id="@+id/chimpanzeeImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/chimpanzee"
+            android:contentDescription="Chimpanzee"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/baboonImage"
+            app:layout_constraintStart_toEndOf="@id/cheetahImage"
+            android:layout_marginTop="16dp"/>
+
+        <ImageView
+            android:id="@+id/hippopotamusImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/hippopotamus"
+            android:contentDescription="Hippopotamus"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/bullImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <ImageView
+            android:id="@+id/crocodileImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/crocodile"
+            android:contentDescription="Crocodile"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/bullImage"
+            app:layout_constraintStart_toEndOf="@id/hippopotamusImage"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <ImageView
+            android:id="@+id/dolphinImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/dolphin"
+            android:contentDescription="Dolphin"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/bullImage"
+            app:layout_constraintStart_toEndOf="@id/crocodileImage"
+            android:layout_marginTop="16dp"/>
+
+        <ImageView
+            android:id="@+id/donkeyImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/donkey"
+            android:contentDescription="Donkey"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/hippopotamusImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <ImageView
+            android:id="@+id/eelImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/eel"
+            android:contentDescription="Eel"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/hippopotamusImage"
+            app:layout_constraintStart_toEndOf="@id/donkeyImage"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <ImageView
+            android:id="@+id/hyenaImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/hyena"
+            android:contentDescription="Hyena"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/hippopotamusImage"
+            app:layout_constraintStart_toEndOf="@id/eelImage"
+            android:layout_marginTop="16dp"/>
+
+        <ImageView
+            android:id="@+id/foxImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/fox"
+            android:contentDescription="Fox"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/donkeyImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <ImageView
+            android:id="@+id/jackalImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/jackal"
+            android:contentDescription="Jackal"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/donkeyImage"
+            app:layout_constraintStart_toEndOf="@id/foxImage"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <ImageView
+            android:id="@+id/gharialImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/gharial"
+            android:contentDescription="Gharial"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/donkeyImage"
+            app:layout_constraintStart_toEndOf="@id/jackalImage"
+            android:layout_marginTop="16dp"/>
+
+        <ImageView
+            android:id="@+id/gibbonImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/gibbon"
+            android:contentDescription="Gibbon"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/foxImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <ImageView
+            android:id="@+id/giraffeImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/giraffe"
+            android:contentDescription="Giraffe"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/foxImage"
+            app:layout_constraintStart_toEndOf="@id/gibbonImage"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <ImageView
+            android:id="@+id/goatImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/goat"
+            android:contentDescription="Goat"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/foxImage"
+            app:layout_constraintStart_toEndOf="@id/giraffeImage"
+            android:layout_marginTop="16dp"/>
+
+        <ImageView
+            android:id="@+id/gorillaImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/gorilla"
+            android:contentDescription="Gorilla"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/gibbonImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

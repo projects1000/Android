@@ -264,7 +264,7 @@ public class OneTo30Activity extends AppCompatActivity {
 
         // Set the text of the dialog
         TextView dialogText = dialogView.findViewById(R.id.dialogText);
-        dialogText.setText("Click " + correctLetter);
+        dialogText.setText(""+correctLetter);
 
         // Create and configure the dialog
         AlertDialog.Builder builder = new AlertDialog.Builder(this);

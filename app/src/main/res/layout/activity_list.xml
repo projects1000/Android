@@ -8,6 +8,7 @@
     android:background="@drawable/insidegame"
     android:padding="16dp"
     android:id="@+id/listLayout">
+
     <!-- Header TextView ("Learn") -->
     <TextView
         android:id="@+id/headerLearn"
@@ -23,6 +24,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginBottom="32dp"/>
+
+    <!-- Button for "Identify the Objects" -->
+    <Button
+        android:id="@+id/btnIdentifyObjects"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Identify the Objects"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_curved"
+        android:letterSpacing="0.2"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+        android:textAllCaps="false"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnLearn1to30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
     <!-- Button to Start Learn 1 To 30 -->
     <Button
         android:id="@+id/btnLearn1to30"

@@ -19,6 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SmallLetterA2ZGameActivity" />
+        <activity android:name=".IdentifyObjectsActivity" />
+        <activity android:name=".IdentifyList" />
 
         <!-- A2ZGameActivity declared, but not as the launcher -->
         <activity
