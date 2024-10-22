@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border_style"
+    android:padding="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- Fruits Row -->
+        <ImageView
+            android:id="@+id/appleImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/apple"
+            android:contentDescription="Apple"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="8dp"/>
+
+        <ImageView
+            android:id="@+id/grapesImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/grapes"
+            android:contentDescription="Grapes"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/appleImage"
+            android:layout_margin="8dp"/>
+
+        <ImageView
+            android:id="@+id/bananaImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/banana"
+            android:contentDescription="Banana"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/grapesImage"
+            android:layout_margin="8dp"/>
+
+        <!-- Separator Line -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@id/appleImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"/>
+            <!-- Rose Image -->
+            <ImageView
+                android:id="@+id/roseImage"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/rose"
+                android:contentDescription="Rose"
+                android:scaleType="centerInside"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintTop_toBottomOf="@id/appleImage"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_margin="8dp"/>
+
+            <!-- Lily Image -->
+            <ImageView
+                android:id="@+id/lilyImage"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/lily"
+                android:contentDescription="Lily"
+                android:scaleType="centerInside"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintTop_toBottomOf="@id/appleImage"
+                app:layout_constraintStart_toEndOf="@id/roseImage"
+                android:layout_margin="8dp"/>
+
+            <!-- Lavender Image -->
+            <ImageView
+                android:id="@+id/lavenderImage"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/lavender"
+                android:contentDescription="Lavender"
+                android:scaleType="centerInside"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintTop_toBottomOf="@id/appleImage"
+                app:layout_constraintStart_toEndOf="@id/lilyImage"
+                android:layout_margin="8dp"/>
+
+        <!-- Row 2: Sunflower, Dahlia, Lotus -->
+        <!-- Sunflower Image -->
+        <ImageView
+            android:id="@+id/hibiscusImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/hibiscus"
+            android:contentDescription="Hibiscus"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/roseImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="8dp"/>
+        <!-- Jasmine Image -->
+        <ImageView
+            android:id="@+id/jasmineImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/jasmine"
+            android:contentDescription="Jasmine"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/roseImage"
+            app:layout_constraintStart_toEndOf="@id/hibiscusImage"
+            android:layout_margin="8dp"/>
+
+        <!-- Tulsi Image -->
+        <ImageView
+            android:id="@+id/tulsiImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/tulsi"
+            android:contentDescription="Tulsi"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/roseImage"
+            app:layout_constraintStart_toEndOf="@id/jasmineImage"
+            android:layout_margin="8dp"/>
+
+        <!-- Rudraksha Image -->
+        <ImageView
+            android:id="@+id/dahliaImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/dahlia"
+            android:contentDescription="Dahlia"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/hibiscusImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="8dp"/>
+
+        <!-- Lotus Image -->
+        <ImageView
+            android:id="@+id/lotusImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/lotus"
+            android:contentDescription="Lotus"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/hibiscusImage"
+            app:layout_constraintStart_toEndOf="@id/dahliaImage"
+            android:layout_margin="8dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

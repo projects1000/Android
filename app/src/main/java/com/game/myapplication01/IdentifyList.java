@@ -26,6 +26,25 @@ public class IdentifyList extends AppCompatActivity {
             }
         });
 
+        Button btnBirds = findViewById(R.id.btnBirds);
+        btnBirds.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create an intent to navigate to IdentifyBirdsActivity
+                Intent intent = new Intent(IdentifyList.this, IdentifyBirdsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btnFlower = findViewById(R.id.btnFlowers);
+        btnFlower.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create an intent to navigate to IdentifyFlowersActivity
+                Intent intent = new Intent(IdentifyList.this, IdentifyFlowersActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }

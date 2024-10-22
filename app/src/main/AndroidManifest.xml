@@ -20,6 +20,8 @@
         </activity>
         <activity android:name=".SmallLetterA2ZGameActivity" />
         <activity android:name=".IdentifyObjectsActivity" />
+        <activity android:name=".IdentifyBirdsActivity" />
+        <activity android:name=".IdentifyFlowersActivity" />
         <activity android:name=".IdentifyList" />
 
         <!-- A2ZGameActivity declared, but not as the launcher -->

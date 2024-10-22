@@ -1,0 +1,3 @@
+<resources>
+    <dimen name="dynamic_top_margin">50dp</dimen>
+</resources>

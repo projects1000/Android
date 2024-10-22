@@ -10,11 +10,11 @@ import android.media.MediaPlayer;
 
 public class IdentifyObjectsActivity extends AppCompatActivity {
 
-    private ImageView tigerImage, dogImage, elephantImage;
+    private ImageView tigerImage, dogImage, elephantImage, lionImage, bearImage, catImage;
     private ImageView horseImage, frogImage, cowImage;
     private ImageView alligatorImage, anacondaImage, antelopeImage;
     private ImageView baboon, blackpanther, buffalo;
-    private ImageView bull, cheetah, chimpanzee, hippopotamus, crocodile, dolphin, donkey, eel, hyena, fox, jackal, gharial, gibbon, giraffe, goat, gorilla;
+    private ImageView bull, cheetah, chimpanzee, hippopotamus, crocodile, dolphin, donkey, eel, hyena, fox, jackal, gharial, gibbon, giraffe, goat, gorilla, rabbit, zebra;
     private MediaPlayer currentMediaPlayer;
     private boolean isSoundPlaying = false;
     private boolean isDialogOpen = false; // Flag to track if the dialog is open
@@ -28,6 +28,9 @@ public class IdentifyObjectsActivity extends AppCompatActivity {
         tigerImage = findViewById(R.id.tigerImage);
         dogImage = findViewById(R.id.dogImage);
         elephantImage = findViewById(R.id.elephantImage);
+        lionImage = findViewById(R.id.lionImage);
+        bearImage = findViewById(R.id.bearImage);
+        catImage = findViewById(R.id.catImage);
         horseImage = findViewById(R.id.horseImage);
         frogImage = findViewById(R.id.frogImage);
         cowImage = findViewById(R.id.cowImage);
@@ -53,11 +56,16 @@ public class IdentifyObjectsActivity extends AppCompatActivity {
         giraffe = findViewById(R.id.giraffeImage);
         goat = findViewById(R.id.goatImage);
         gorilla = findViewById(R.id.gorillaImage);
+        rabbit = findViewById(R.id.rabbitImage);   // For rabbit
+        zebra = findViewById(R.id.zebraImage);
 
         // Set click listeners
         tigerImage.setOnClickListener(v -> handleAnimalClick(tigerImage, "Tiger", R.raw.tiger, R.raw.tigersound));
         dogImage.setOnClickListener(v -> handleAnimalClick(dogImage, "Dog", R.raw.dog, R.raw.dogsound));
         elephantImage.setOnClickListener(v -> handleAnimalClick(elephantImage, "Elephant", R.raw.elephant, R.raw.elephantsound));
+        lionImage.setOnClickListener(v -> handleAnimalClick(lionImage, "Lion", R.raw.lion, R.raw.lionsound));
+        bearImage.setOnClickListener(v -> handleAnimalClick(bearImage, "Bear", R.raw.bear, R.raw.bearsound));
+        catImage.setOnClickListener(v -> handleAnimalClick(catImage, "Cat", R.raw.cat, R.raw.catsound));
         horseImage.setOnClickListener(v -> handleAnimalClick(horseImage, "Horse", R.raw.horse, R.raw.horsesound));
         frogImage.setOnClickListener(v -> handleAnimalClick(frogImage, "Frog", R.raw.frog, R.raw.frogsound));
         cowImage.setOnClickListener(v -> handleAnimalClick(cowImage, "Cow", R.raw.cow, R.raw.cowsound));
@@ -83,6 +91,9 @@ public class IdentifyObjectsActivity extends AppCompatActivity {
         giraffe.setOnClickListener(v -> handleAnimalClick(giraffe, "Giraffe", R.raw.giraffe, -1));
         goat.setOnClickListener(v -> handleAnimalClick(goat, "Goat", R.raw.goat, -1));
         gorilla.setOnClickListener(v -> handleAnimalClick(gorilla, "Gorilla", R.raw.gorilla, -1));
+        rabbit.setOnClickListener(v -> handleAnimalClick(rabbit, "Rabbit", R.raw.rabbit, R.raw.rabbitsound));  // For rabbit
+        zebra.setOnClickListener(v -> handleAnimalClick(zebra, "Zebra", R.raw.zebra, R.raw.zebrasound));      // For zebra
+
     }
 
     private void handleAnimalClick(ImageView imageView, String title, int primarySoundRes, int secondarySoundRes) {

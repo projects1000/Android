@@ -62,7 +62,7 @@
         android:id="@+id/btnFlowers"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="Flowers"
+        android:text="Fruits and Flowers"
         android:textColor="#FFFFFF"
         android:background="@drawable/button_curved"
         android:letterSpacing="0.2"

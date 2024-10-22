@@ -54,7 +54,51 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@id/dogImage"
             android:layout_margin="8dp"/>
+        <!-- Lion Image -->
+        <ImageView
+            android:id="@+id/lionImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/lion"
+            android:contentDescription="Lion"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/tigerImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="8dp"/>
 
+        <!-- Bear Image -->
+        <ImageView
+            android:id="@+id/bearImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/bear"
+            android:contentDescription="Bear"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/tigerImage"
+            app:layout_constraintStart_toEndOf="@id/lionImage"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <!-- Cat Image -->
+        <ImageView
+            android:id="@+id/catImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/cat"
+            android:contentDescription="Cat"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/tigerImage"
+            app:layout_constraintStart_toEndOf="@id/bearImage"
+            android:layout_margin="8dp"/>
         <!-- Horse Image -->
         <ImageView
             android:id="@+id/horseImage"
@@ -66,7 +110,7 @@
             android:background="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:focusable="true"
-            app:layout_constraintTop_toBottomOf="@id/tigerImage"
+            app:layout_constraintTop_toBottomOf="@id/lionImage"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_margin="8dp"/>
 
@@ -81,32 +125,36 @@
             android:background="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:focusable="true"
-            app:layout_constraintTop_toBottomOf="@id/dogImage"
+            app:layout_constraintTop_toBottomOf="@id/lionImage"
             app:layout_constraintStart_toEndOf="@id/horseImage"
             android:layout_margin="8dp"/>
 
         <!-- Frog Image -->
+
+        <!-- Jackal Image (now where Alligator was) -->
+
         <ImageView
             android:id="@+id/frogImage"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:src="@drawable/frog"
-            android:contentDescription="Frog"
-            android:scaleType="centerInside"
+            android:layout_margin="8dp"
+            android:layout_marginStart="192dp"
+            android:layout_marginTop="44dp"
             android:background="?android:attr/selectableItemBackground"
             android:clickable="true"
+            android:contentDescription="Frog"
             android:focusable="true"
-            app:layout_constraintTop_toBottomOf="@id/elephantImage"
+            android:scaleType="centerInside"
+            android:src="@drawable/frog"
             app:layout_constraintStart_toEndOf="@id/cowImage"
-            android:layout_margin="8dp"/>
+            app:layout_constraintTop_toBottomOf="@id/lionImage" />
 
-        <!-- Alligator Image -->
         <ImageView
-            android:id="@+id/alligatorImage"
+            android:id="@+id/jackalImage"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:src="@drawable/alligator"
-            android:contentDescription="Alligator"
+            android:src="@drawable/jackal"
+            android:contentDescription="Jackal"
             android:scaleType="centerInside"
             android:background="?android:attr/selectableItemBackground"
             android:clickable="true"
@@ -129,7 +177,7 @@
             android:clickable="true"
             android:focusable="true"
             app:layout_constraintTop_toBottomOf="@id/frogImage"
-            app:layout_constraintStart_toEndOf="@id/alligatorImage"
+            app:layout_constraintStart_toEndOf="@id/jackalImage"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"/>
 
@@ -322,7 +370,21 @@
             app:layout_constraintTop_toBottomOf="@id/hippopotamusImage"
             app:layout_constraintStart_toEndOf="@id/eelImage"
             android:layout_marginTop="16dp"/>
-
+        <!-- Alligator Image (now where Jackal was) -->
+        <ImageView
+            android:id="@+id/alligatorImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/alligator"
+            android:contentDescription="Alligator"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/donkeyImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"/>
         <ImageView
             android:id="@+id/foxImage"
             android:layout_width="120dp"
@@ -334,22 +396,7 @@
             android:clickable="true"
             android:focusable="true"
             app:layout_constraintTop_toBottomOf="@id/donkeyImage"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"/>
-
-        <ImageView
-            android:id="@+id/jackalImage"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:src="@drawable/jackal"
-            android:contentDescription="Jackal"
-            android:scaleType="centerInside"
-            android:background="?android:attr/selectableItemBackground"
-            android:clickable="true"
-            android:focusable="true"
-            app:layout_constraintTop_toBottomOf="@id/donkeyImage"
-            app:layout_constraintStart_toEndOf="@id/foxImage"
+            app:layout_constraintStart_toEndOf="@id/alligatorImage"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"/>
 
@@ -364,7 +411,7 @@
             android:clickable="true"
             android:focusable="true"
             app:layout_constraintTop_toBottomOf="@id/donkeyImage"
-            app:layout_constraintStart_toEndOf="@id/jackalImage"
+            app:layout_constraintStart_toEndOf="@id/foxImage"
             android:layout_marginTop="16dp"/>
 
         <ImageView
@@ -425,5 +472,34 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"/>
+
+        <ImageView
+            android:id="@+id/rabbitImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/rabbit"
+            android:contentDescription="Rabbit"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/gibbonImage"
+            app:layout_constraintStart_toEndOf="@id/gorillaImage"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <ImageView
+            android:id="@+id/zebraImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/zebra"
+            android:contentDescription="Zebra"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/gibbonImage"
+            app:layout_constraintStart_toEndOf="@id/rabbitImage"
+            android:layout_marginTop="16dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

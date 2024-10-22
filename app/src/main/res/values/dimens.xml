@@ -1,4 +1,3 @@
 <resources>
-    <dimen name="balloon_size">100dp</dimen> <!-- Adjust as needed -->
-    <dimen name="grid_padding">8dp</dimen>    <!-- Padding between cells -->
+    <dimen name="dynamic_top_margin">7dp</dimen>
 </resources>
