@@ -29,12 +29,15 @@
             android:name=".A2ZGameActivity"
             android:exported="false" />
         <activity android:name=".AZListingActivity" />
-        <activity android:name=".OneTo30Activity" />
-        <!-- ErrorActivity declaration -->
+        <activity
+            android:name=".OneTo30Activity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+        </activity>
         <activity
             android:name=".ErrorActivity"
             android:exported="false" />
 
     </application>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 
 </manifest>

@@ -25,10 +25,10 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginBottom="32dp"/>
 
-    <!-- Button for "Identify the Objects" -->
+
     <Button
         android:id="@+id/btnIdentifyObjects"
-        android:layout_width="250dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Identify the Objects"
         android:textColor="#FFFFFF"
@@ -45,7 +45,7 @@
     <!-- Button to Start Learn 1 To 30 -->
     <Button
         android:id="@+id/btnLearn1to30"
-        android:layout_width="250dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="1 To 30"
         android:textColor="#FFFFFF"
@@ -62,7 +62,7 @@
     <!-- Button to Start Learn Capital A to Z -->
     <Button
         android:id="@+id/btnLearnCapital"
-        android:layout_width="250dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="CAPITAL A to Z"
         android:textColor="#FFFFFF"
@@ -79,7 +79,7 @@
     <!-- Button to Start Learn Small a to z -->
     <Button
         android:id="@+id/btnLearnSmall"
-        android:layout_width="250dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Small a to z"
         android:background="@drawable/button_curved"

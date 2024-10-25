@@ -2,6 +2,7 @@ package com.game.myapplication01;
 
 import android.app.AlertDialog;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -21,8 +22,20 @@ public class IdentifyObjectsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.animal_object);
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        int screenWidth = displayMetrics.widthPixels;
+        int screenHeight = displayMetrics.heightPixels;
+
+        if (screenWidth <= 720) { // Small screens (width <= 720px)
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.animal_small);
+
+        } else if(screenWidth > 720)  //large
+        {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.animal_large);
+        }
 
         // Initialize image views
         tigerImage = findViewById(R.id.tigerImage);

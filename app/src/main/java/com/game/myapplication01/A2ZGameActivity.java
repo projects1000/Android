@@ -78,6 +78,7 @@ public class A2ZGameActivity extends AppCompatActivity {
         double buttonSizeMargin = 0.0;
         int leftMargin =0;
         int rightMargin =0;
+
         if (screenWidth <= 720) { // Small screens (width <= 720px)
             buttonSizeMargin = 1.2;  // Adjust this value for medium screens
             leftMargin = 11;
@@ -166,8 +167,8 @@ public class A2ZGameActivity extends AppCompatActivity {
         ObjectAnimator moveUp = ObjectAnimator.ofFloat(instructionsText, "translationY", 0f, -20f);
         ObjectAnimator moveDown = ObjectAnimator.ofFloat(instructionsText, "translationY", -20f, 0f);
 
-        moveUp.setDuration(1000); // Duration for moving up
-        moveDown.setDuration(1000); // Duration for moving down
+//        moveUp.setDuration(5000); // Duration for moving up
+//        moveDown.setDuration(5000); // Duration for moving down
 
         moveUp.setInterpolator(new AccelerateDecelerateInterpolator());
         moveDown.setInterpolator(new AccelerateDecelerateInterpolator());

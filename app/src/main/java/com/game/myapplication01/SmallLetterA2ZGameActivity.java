@@ -20,7 +20,10 @@ import androidx.constraintlayout.widget.ConstraintSet;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
+import android.view.animation.AccelerateDecelerateInterpolator;
+import android.animation.ValueAnimator; // Add this line
 public class SmallLetterA2ZGameActivity extends AppCompatActivity {
 
     // Change currentLetter to 'a'
@@ -73,10 +76,24 @@ public class SmallLetterA2ZGameActivity extends AppCompatActivity {
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int screenWidth = displayMetrics.widthPixels;
         int screenHeight = displayMetrics.heightPixels;
+        double buttonSizeMargin = 0.0;
+        int leftMargin =0;
+        int rightMargin =0;
+
+        if (screenWidth <= 720) { // Small screens (width <= 720px)
+            buttonSizeMargin = 1.2;  // Adjust this value for medium screens
+            leftMargin = 11;
+            rightMargin = 2;
+        } else if(screenWidth > 720)  //large
+        {
+            leftMargin = -18;
+            rightMargin = -18;
+            buttonSizeMargin = 1;  // Adjust this value for large screens
+        }
 
         int numColumns = screenWidth > screenHeight ? 5 : 4; // Adjust columns based on orientation
         int margin = (int) (8 * displayMetrics.density); // Dynamic margin based on screen density
-        int buttonSize = (screenWidth - (numColumns + 1) * margin) / numColumns;
+        int buttonSize = (int) ((screenWidth - (numColumns + 1) * margin) / (numColumns * buttonSizeMargin)); // Decrease button size
 
         for (int i = 0; i < letters.size(); i++) {
             char letter = letters.get(i);
@@ -84,12 +101,15 @@ public class SmallLetterA2ZGameActivity extends AppCompatActivity {
             button.setId(View.generateViewId());
             button.setText(String.valueOf(letter));
             button.setAllCaps(false);  // Disable automatic capitalization
-            button.setTextSize(38); // Adjusted to be smaller
+            button.setTextSize(28); // Adjusted to be smaller
             button.setTypeface(null, android.graphics.Typeface.BOLD);
             button.setBackgroundColor(Color.parseColor("#fa5936"));
             button.setTextColor(Color.WHITE);
 
             ConstraintLayout.LayoutParams params = new ConstraintLayout.LayoutParams(buttonSize, buttonSize);
+            int buttonMargin = (int) (16 * displayMetrics.density); // Increase this value for more gap
+            params.setMargins(buttonMargin, buttonMargin, buttonMargin, buttonMargin); // Adjust margin
+
             params.setMargins(margin, margin, margin, margin);
             button.setLayoutParams(params);
             mainLayout.addView(button);
@@ -99,9 +119,11 @@ public class SmallLetterA2ZGameActivity extends AppCompatActivity {
 
             if (i % numColumns == 0) {
                 constraintSet.connect(button.getId(), ConstraintSet.TOP, mainLayout.getId(), ConstraintSet.TOP, margin + (i / numColumns) * (buttonSize + margin));
+                constraintSet.connect(button.getId(), ConstraintSet.LEFT, mainLayout.getId(), ConstraintSet.LEFT, margin + leftMargin); // Increase this value to shift right
+
             } else {
                 constraintSet.connect(button.getId(), ConstraintSet.TOP, mainLayout.getId(), ConstraintSet.TOP, margin + (i / numColumns) * (buttonSize + margin));
-                constraintSet.connect(button.getId(), ConstraintSet.LEFT, ((Button) mainLayout.getChildAt(i - 1)).getId(), ConstraintSet.RIGHT, margin);
+                constraintSet.connect(button.getId(), ConstraintSet.LEFT, ((Button) mainLayout.getChildAt(i - 1)).getId(), ConstraintSet.RIGHT, margin + rightMargin);
             }
 
             final char currentChar = letter;
@@ -126,11 +148,10 @@ public class SmallLetterA2ZGameActivity extends AppCompatActivity {
         TextView instructionsText = new TextView(this);
         instructionsText.setId(View.generateViewId());
         instructionsText.setText("Press a to z");
-        instructionsText.setTextSize(24);
-        instructionsText.setTextColor(Color.parseColor("#8B4513"));
-        instructionsText.setTypeface(null, Typeface.BOLD);
-        instructionsText.setGravity(Gravity.CENTER);
-        instructionsText.setBackgroundColor(Color.LTGRAY);
+        instructionsText.setTextSize(26); // Increase text size
+        instructionsText.setTextColor(Color.parseColor("#FF5733")); // Change text color
+        instructionsText.setTypeface(null, Typeface.ITALIC); // Make it italic
+        instructionsText.setGravity(Gravity.END); // Align text to the right
         instructionsText.setPadding(16, 16, 16, 16);
 
         ConstraintLayout.LayoutParams paramsText = new ConstraintLayout.LayoutParams(
@@ -138,10 +159,38 @@ public class SmallLetterA2ZGameActivity extends AppCompatActivity {
         paramsText.bottomToBottom = ConstraintLayout.LayoutParams.PARENT_ID;
         paramsText.leftToLeft = ConstraintLayout.LayoutParams.PARENT_ID;
         paramsText.rightToRight = ConstraintLayout.LayoutParams.PARENT_ID;
-        paramsText.setMargins(0, 0, 0, margin * 2);
+        paramsText.setMargins(230, 0, 0, margin * 2); // Add margin from the bottom and 20dp margin from the right
 
         instructionsText.setLayoutParams(paramsText);
         mainLayout.addView(instructionsText);
+
+        // Add animation
+        // Create up and down animation
+        ObjectAnimator moveUp = ObjectAnimator.ofFloat(instructionsText, "translationY", 0f, -20f);
+        ObjectAnimator moveDown = ObjectAnimator.ofFloat(instructionsText, "translationY", -20f, 0f);
+
+//        moveUp.setDuration(5000); // Duration for moving up
+//        moveDown.setDuration(5000); // Duration for moving down
+
+        moveUp.setInterpolator(new AccelerateDecelerateInterpolator());
+        moveDown.setInterpolator(new AccelerateDecelerateInterpolator());
+
+        ValueAnimator animator = ValueAnimator.ofFloat(0f, 20f); // Move it up and down
+        animator.setDuration(1000); // Duration of one cycle
+        animator.setInterpolator(new AccelerateDecelerateInterpolator());
+        animator.setRepeatCount(ValueAnimator.INFINITE); // Repeat infinitely
+        animator.setRepeatMode(ValueAnimator.REVERSE); // Reverse animation at the end of each cycle
+
+        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                float value = (float) animation.getAnimatedValue();
+                instructionsText.setTranslationY(value); // Move the TextView up and down
+            }
+        });
+
+        animator.start(); // Start the animation
+
 
         View separationLine = new View(this);
         separationLine.setId(View.generateViewId());

@@ -45,7 +45,7 @@
         android:id="@+id/mindGameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MindGame"
+        android:text="EduFun"
         android:textSize="44sp"
         android:shadowColor="#000000"
         android:shadowDx="2"
@@ -63,8 +63,8 @@
     <!-- Go Inside Button positioned at the bottom -->
     <Button
         android:id="@+id/goInsideButton"
-        android:layout_width="237dp"
-        android:layout_height="76dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/button_curved"
         android:letterSpacing="0.2"

@@ -1,5 +1,7 @@
 package com.game.myapplication01;
 
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -9,6 +11,7 @@ import android.os.Handler;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.View;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -71,17 +74,30 @@ public class OneTo30Activity extends AppCompatActivity {
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int screenWidth = displayMetrics.widthPixels;
         int screenHeight = displayMetrics.heightPixels;
+        double buttonSizeMargin = 0.0;
+        int leftMargin =0;
+        int rightMargin =0;
 
+        if (screenWidth <= 720) { // Small screens (width <= 720px)
+            buttonSizeMargin = 1.4;  // Adjust this value for medium screens
+            leftMargin = 16;
+            rightMargin = 2;
+        } else if(screenWidth > 720)  //large
+        {
+            leftMargin = -18;
+            rightMargin = -18;
+            buttonSizeMargin = 1;  // Adjust this value for large screens
+        }
         int numColumns = screenWidth > screenHeight ? 5 : 4; // Adjust columns based on orientation
         int margin = (int) (8 * displayMetrics.density); // Dynamic margin based on screen density
-        int buttonSize = (screenWidth - (numColumns + 1) * margin) / numColumns;
+        int buttonSize = (int) ((screenWidth - (numColumns + 1) * margin) / (numColumns * buttonSizeMargin)); // Decrease button size
 
         for (int i = 0; i < letters.size(); i++) {
             int letter = letters.get(i);
             Button button = new Button(this);
             button.setId(View.generateViewId());
             button.setText(String.valueOf(letter));
-            button.setTextSize(38); // Adjusted to be smaller
+            button.setTextSize(32); // Adjusted to be smaller
             button.setTypeface(null, Typeface.BOLD);
             button.setBackgroundColor(Color.parseColor("#fa5936"));
             button.setTextColor(Color.WHITE);
@@ -96,9 +112,11 @@ public class OneTo30Activity extends AppCompatActivity {
 
             if (i % numColumns == 0) {
                 constraintSet.connect(button.getId(), ConstraintSet.TOP, mainLayout.getId(), ConstraintSet.TOP, margin + (i / numColumns) * (buttonSize + margin));
+                constraintSet.connect(button.getId(), ConstraintSet.LEFT, mainLayout.getId(), ConstraintSet.LEFT, margin + leftMargin); // Increase this value to shift right
+
             } else {
                 constraintSet.connect(button.getId(), ConstraintSet.TOP, mainLayout.getId(), ConstraintSet.TOP, margin + (i / numColumns) * (buttonSize + margin));
-                constraintSet.connect(button.getId(), ConstraintSet.LEFT, ((Button) mainLayout.getChildAt(i - 1)).getId(), ConstraintSet.RIGHT, margin);
+                constraintSet.connect(button.getId(), ConstraintSet.LEFT, ((Button) mainLayout.getChildAt(i - 1)).getId(), ConstraintSet.RIGHT, margin + rightMargin);
             }
 
             final int currentChar = letter;
@@ -124,12 +142,11 @@ public class OneTo30Activity extends AppCompatActivity {
 
         TextView instructionsText = new TextView(this);
         instructionsText.setId(View.generateViewId());
-        instructionsText.setText("");
-        instructionsText.setTextSize(24);
-        instructionsText.setTextColor(Color.parseColor("#aa53bc"));
-        instructionsText.setTypeface(null, Typeface.BOLD);
-        instructionsText.setGravity(Gravity.CENTER);
-        instructionsText.setBackgroundColor(Color.LTGRAY);
+        instructionsText.setText("Press 1 to 30");
+        instructionsText.setTextSize(26);
+        instructionsText.setTextColor(Color.parseColor("#FF5733"));
+        instructionsText.setTypeface(null, Typeface.ITALIC);
+        instructionsText.setGravity(Gravity.END);
         instructionsText.setPadding(16, 16, 16, 16);
 
         ConstraintLayout.LayoutParams paramsText = new ConstraintLayout.LayoutParams(
@@ -137,10 +154,37 @@ public class OneTo30Activity extends AppCompatActivity {
         paramsText.bottomToBottom = ConstraintLayout.LayoutParams.PARENT_ID;
         paramsText.leftToLeft = ConstraintLayout.LayoutParams.PARENT_ID;
         paramsText.rightToRight = ConstraintLayout.LayoutParams.PARENT_ID;
-        paramsText.setMargins(0, 0, 0, margin * 2);
+        paramsText.setMargins(230, 0, 0, margin * 2);
 
         instructionsText.setLayoutParams(paramsText);
         mainLayout.addView(instructionsText);
+
+        // Add animation
+        // Create up and down animation
+        ObjectAnimator moveUp = ObjectAnimator.ofFloat(instructionsText, "translationY", 0f, -20f);
+        ObjectAnimator moveDown = ObjectAnimator.ofFloat(instructionsText, "translationY", -20f, 0f);
+
+//        moveUp.setDuration(5000); // Duration for moving up
+//        moveDown.setDuration(5000); // Duration for moving down
+
+        moveUp.setInterpolator(new AccelerateDecelerateInterpolator());
+        moveDown.setInterpolator(new AccelerateDecelerateInterpolator());
+
+        ValueAnimator animator = ValueAnimator.ofFloat(0f, 20f); // Move it up and down
+//        animator.setDuration(1000); // Duration of one cycle
+        animator.setInterpolator(new AccelerateDecelerateInterpolator());
+        animator.setRepeatCount(ValueAnimator.INFINITE); // Repeat infinitely
+        animator.setRepeatMode(ValueAnimator.REVERSE); // Reverse animation at the end of each cycle
+
+        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                float value = (float) animation.getAnimatedValue();
+                instructionsText.setTranslationY(value); // Move the TextView up and down
+            }
+        });
+
+        animator.start(); // Start the animation
 
         constraintSet.applyTo(mainLayout);
     }

@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/insidegame"
-    android:padding="16dp"
-    android:id="@+id/listLayout">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/insidegame"
+        android:padding="16dp"
+        android:id="@+id/listLayout">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!-- Fruits Row -->
     <TextView
         android:id="@+id/headerLearn"
         android:layout_width="wrap_content"
@@ -26,7 +28,7 @@
 
     <Button
         android:id="@+id/btnAnimals"
-        android:layout_width="250dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Animals"
         android:textColor="#FFFFFF"
@@ -43,7 +45,7 @@
 
     <Button
         android:id="@+id/btnBirds"
-        android:layout_width="250dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Birds"
         android:textColor="#FFFFFF"
@@ -60,7 +62,7 @@
 
     <Button
         android:id="@+id/btnFlowers"
-        android:layout_width="250dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Fruits and Flowers"
         android:textColor="#FFFFFF"
@@ -77,7 +79,7 @@
 
     <Button
         android:id="@+id/btnVegetables"
-        android:layout_width="250dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Vegetables"
         android:textColor="#FFFFFF"
@@ -94,7 +96,7 @@
 
     <Button
         android:id="@+id/btnVehicles"
-        android:layout_width="250dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Vehicles"
         android:textColor="#FFFFFF"
@@ -111,7 +113,7 @@
 
     <Button
         android:id="@+id/btnNonLivingObjects"
-        android:layout_width="250dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Non-Living Objects"
         android:textColor="#FFFFFF"
@@ -128,7 +130,7 @@
 
     <Button
         android:id="@+id/btnGames"
-        android:layout_width="250dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Games"
         android:textColor="#FFFFFF"
@@ -145,7 +147,7 @@
 
     <Button
         android:id="@+id/btnMusicalInstruments"
-        android:layout_width="250dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Musical Instruments"
         android:textColor="#FFFFFF"
@@ -162,7 +164,7 @@
 
     <Button
         android:id="@+id/btnCommunity"
-        android:layout_width="250dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Community"
         android:textColor="#FFFFFF"
@@ -177,4 +179,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

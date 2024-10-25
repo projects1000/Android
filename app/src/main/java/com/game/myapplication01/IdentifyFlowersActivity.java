@@ -3,6 +3,7 @@ package com.game.myapplication01;
 import android.app.AlertDialog;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -22,8 +23,21 @@ public class IdentifyFlowersActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.flower_object);
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        int screenWidth = displayMetrics.widthPixels;
+        int screenHeight = displayMetrics.heightPixels;
+
+        if (screenWidth <= 720) { // Small screens (width <= 720px)
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.flower_small);
+
+        } else if(screenWidth > 720)  //large
+        {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.flower_large);
+        }
+
 
 
     }
