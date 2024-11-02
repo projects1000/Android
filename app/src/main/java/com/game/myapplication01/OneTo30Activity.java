@@ -35,6 +35,15 @@ public class OneTo30Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // Set full-screen mode
+        MusicManager.pauseMusic();
+        getWindow().getDecorView().setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE |
+                        View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION |
+                        View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN |
+                        View.SYSTEM_UI_FLAG_HIDE_NAVIGATION |
+                        View.SYSTEM_UI_FLAG_FULLSCREEN |
+                        View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -77,16 +86,19 @@ public class OneTo30Activity extends AppCompatActivity {
         double buttonSizeMargin = 0.0;
         int leftMargin =0;
         int rightMargin =0;
+        int textSize =0;
 
         if (screenWidth <= 720) { // Small screens (width <= 720px)
-            buttonSizeMargin = 1.4;  // Adjust this value for medium screens
-            leftMargin = 16;
-            rightMargin = 2;
+            buttonSizeMargin = 1.5;  // Adjust this value for medium screens
+            leftMargin = 27;
+            rightMargin = 29;
+            textSize = 23;
         } else if(screenWidth > 720)  //large
         {
             leftMargin = -18;
             rightMargin = -18;
             buttonSizeMargin = 1;  // Adjust this value for large screens
+            textSize = 28;
         }
         int numColumns = screenWidth > screenHeight ? 5 : 4; // Adjust columns based on orientation
         int margin = (int) (8 * displayMetrics.density); // Dynamic margin based on screen density
@@ -97,7 +109,7 @@ public class OneTo30Activity extends AppCompatActivity {
             Button button = new Button(this);
             button.setId(View.generateViewId());
             button.setText(String.valueOf(letter));
-            button.setTextSize(32); // Adjusted to be smaller
+            button.setTextSize(textSize); // Adjusted to be smaller
             button.setTypeface(null, Typeface.BOLD);
             button.setBackgroundColor(Color.parseColor("#fa5936"));
             button.setTextColor(Color.WHITE);

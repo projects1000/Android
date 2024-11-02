@@ -3,9 +3,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/mindgameico"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/mindgameico"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.myapplication01">
 
@@ -18,10 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".IdentifyGamesActivity" />
         <activity android:name=".SmallLetterA2ZGameActivity" />
         <activity android:name=".IdentifyObjectsActivity" />
         <activity android:name=".IdentifyBirdsActivity" />
         <activity android:name=".IdentifyFlowersActivity" />
+        <activity android:name=".IdentifyVegetablesActivity" />
         <activity android:name=".IdentifyList" />
 
         <!-- A2ZGameActivity declared, but not as the launcher -->

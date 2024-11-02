@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border_style"
+    android:padding="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Vegetables Row -->
+        <ImageView
+            android:id="@+id/potatoImage"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/potato"
+            android:contentDescription="Potato"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="6dp"/>
+
+        <ImageView
+            android:id="@+id/eggplantImage"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/eggplant"
+            android:contentDescription="Eggplant"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/potatoImage"
+            android:layout_margin="6dp"/>
+
+        <ImageView
+            android:id="@+id/carrotImage"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/carrot"
+            android:contentDescription="Carrot"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/eggplantImage"
+            android:layout_margin="6dp"/>
+
+        <!-- Second Row of Vegetables -->
+        <ImageView
+            android:id="@+id/cauliflowerImage"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/cauliflower"
+            android:contentDescription="Cauliflower"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/potatoImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="6dp" />
+
+        <ImageView
+            android:id="@+id/ladyfingerImage"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/ladyfinger"
+            android:contentDescription="Ladyfinger"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/eggplantImage"
+            app:layout_constraintStart_toEndOf="@id/cauliflowerImage"
+            android:layout_margin="6dp" />
+
+        <ImageView
+            android:id="@+id/spinachImage"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/spinach"
+            android:contentDescription="Spinach"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/carrotImage"
+            app:layout_constraintStart_toEndOf="@id/ladyfingerImage"
+            android:layout_margin="6dp" />
+
+
+        <ImageView
+            android:id="@+id/bottlegourdImage"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/bottlegourd"
+            android:contentDescription="Bottle Gourd"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/cauliflowerImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="6dp" />
+
+        <ImageView
+            android:id="@+id/chickpeaImage"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/chickpea"
+            android:contentDescription="Chickpea"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/cauliflowerImage"
+            app:layout_constraintStart_toEndOf="@id/bottlegourdImage"
+            android:layout_margin="6dp" />
+
+        <ImageView
+            android:id="@+id/bittergourdImage"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/bittergourd"
+            android:contentDescription="Bitter Gourd"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/cauliflowerImage"
+            app:layout_constraintStart_toEndOf="@id/chickpeaImage"
+            android:layout_margin="6dp" />
+
+        <!-- Third Row of Vegetables -->
+        <ImageView
+            android:id="@+id/onionImage"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/onion"
+            android:contentDescription="Onion"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/chickpeaImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="6dp"/>
+
+        <ImageView
+            android:id="@+id/tomatoImage"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/tomato"
+            android:contentDescription="Tomato"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/chickpeaImage"
+            app:layout_constraintStart_toEndOf="@id/onionImage"
+            android:layout_margin="6dp"/>
+
+        <ImageView
+            android:id="@+id/bellpepperImage"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/bellpepper"
+            android:contentDescription="Bell Pepper"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/chickpeaImage"
+            app:layout_constraintStart_toEndOf="@id/tomatoImage"
+            android:layout_margin="6dp"/>
+
+
+        <ImageView
+            android:id="@+id/corianderleaveImage"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/corianderleave"
+            android:contentDescription="Coriander Leave"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/onionImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="6dp"/>
+
+        <ImageView
+            android:id="@+id/gingerImage"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/ginger"
+            android:contentDescription="Ginger"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/onionImage"
+            app:layout_constraintStart_toEndOf="@id/corianderleaveImage"
+            android:layout_margin="6dp"/>
+
+        <ImageView
+            android:id="@+id/garlicImage"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/garlic"
+            android:contentDescription="Garlic"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/onionImage"
+            app:layout_constraintStart_toEndOf="@id/gingerImage"
+            android:layout_margin="6dp"/>
+
+
+        <ImageView
+            android:id="@+id/radishImage"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/radish"
+            android:contentDescription="Radish"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/corianderleaveImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="6dp"/>
+
+        <ImageView
+            android:id="@+id/tarorootImage"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/taroroot"
+            android:contentDescription="Taro Root"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/corianderleaveImage"
+            app:layout_constraintStart_toEndOf="@id/radishImage"
+            android:layout_margin="6dp"/>
+
+        <ImageView
+            android:id="@+id/pumpkinImage"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/pumpkin"
+            android:contentDescription="Pumpkin"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/corianderleaveImage"
+            app:layout_constraintStart_toEndOf="@id/tarorootImage"
+            android:layout_margin="6dp"/>
+
+
+        <ImageView
+            android:id="@+id/cucumberImage"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/cucumber"
+            android:contentDescription="Cucumber"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/radishImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="6dp"/>
+
+        <ImageView
+            android:id="@+id/chiliImage"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/chili"
+            android:contentDescription="Chili"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/radishImage"
+            app:layout_constraintStart_toEndOf="@id/cucumberImage"
+            android:layout_margin="6dp"/>
+
+        <ImageView
+            android:id="@+id/pointedgourdImage"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/pointedgourd"
+            android:contentDescription="Pointed Gourd"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/radishImage"
+            app:layout_constraintStart_toEndOf="@id/chiliImage"
+            android:layout_margin="6dp"/>
+
+
+        <ImageView
+            android:id="@+id/ridgegourdImage"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/ridgegourd"
+            android:contentDescription="Ridge Gourd"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/cucumberImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="6dp"/>
+
+        <ImageView
+            android:id="@+id/greenpeasImage"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/greenpeas"
+            android:contentDescription="Green Peas"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/cucumberImage"
+            app:layout_constraintStart_toEndOf="@id/ridgegourdImage"
+            android:layout_margin="6dp"/>
+
+        <ImageView
+            android:id="@+id/drumstickImage"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/drumstick"
+            android:contentDescription="Drumstick"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/cucumberImage"
+            app:layout_constraintStart_toEndOf="@id/greenpeasImage"
+            android:layout_margin="6dp"/>
+
+
+        <ImageView
+            android:id="@+id/beetrootImage"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/beetroot"
+            android:contentDescription="Beetroot"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/drumstickImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="6dp"/>
+
+        <ImageView
+            android:id="@+id/cabbageImage"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/cabbage"
+            android:contentDescription="Cabbage"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/drumstickImage"
+            app:layout_constraintStart_toEndOf="@id/beetrootImage"
+            android:layout_margin="6dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FF0000">
+
+    <!-- Car Letter Text (shows "O" on the car) -->
+    <TextView
+        android:id="@+id/carLetterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="O"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/carView"
+        android:layout_marginTop="-25dp" />
+
+    <!-- Car ImageView with Smaller Size -->
+    <ImageView
+        android:id="@+id/carView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/car"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true" />
+    <ImageView
+        android:id="@+id/completionView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/god"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+    <TextView
+        android:id="@+id/largeWordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="48sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+
+    <!-- Result Text -->
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select letters to form the word!"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/carView"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Reset Button -->
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:layout_below="@id/carView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Left Side Buttons -->
+    <Button
+        android:id="@+id/btnG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="G"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"/>
+
+    <Button
+        android:id="@+id/btnM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="M"
+        android:layout_below="@id/btnG"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btnK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="K"
+        android:layout_below="@id/btnM"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Right Side Buttons -->
+    <Button
+        android:id="@+id/btnD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="D"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+
+    <Button
+        android:id="@+id/btnA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A"
+        android:layout_below="@id/btnD"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btnB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="B"
+        android:layout_below="@id/btnA"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="16dp"/>
+
+</RelativeLayout>

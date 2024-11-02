@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "EduFun"
+rootProject.name = "EduCare"
 include(":app")

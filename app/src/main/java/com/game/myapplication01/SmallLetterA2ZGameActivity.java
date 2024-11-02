@@ -37,6 +37,14 @@ public class SmallLetterA2ZGameActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Set full-screen mode
+        getWindow().getDecorView().setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE |
+                        View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION |
+                        View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN |
+                        View.SYSTEM_UI_FLAG_HIDE_NAVIGATION |
+                        View.SYSTEM_UI_FLAG_FULLSCREEN |
+                        View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         setContentView(R.layout.activity_main);
 
         mediaPlayer = new MediaPlayer(); // Create an empty MediaPlayer
@@ -79,13 +87,16 @@ public class SmallLetterA2ZGameActivity extends AppCompatActivity {
         double buttonSizeMargin = 0.0;
         int leftMargin =0;
         int rightMargin =0;
+        int textSize =0;
 
         if (screenWidth <= 720) { // Small screens (width <= 720px)
-            buttonSizeMargin = 1.2;  // Adjust this value for medium screens
+            buttonSizeMargin = 1.4;  // Adjust this value for medium screens
             leftMargin = 11;
             rightMargin = 2;
+            textSize = 26;
         } else if(screenWidth > 720)  //large
         {
+            textSize =28;
             leftMargin = -18;
             rightMargin = -18;
             buttonSizeMargin = 1;  // Adjust this value for large screens
@@ -101,7 +112,7 @@ public class SmallLetterA2ZGameActivity extends AppCompatActivity {
             button.setId(View.generateViewId());
             button.setText(String.valueOf(letter));
             button.setAllCaps(false);  // Disable automatic capitalization
-            button.setTextSize(28); // Adjusted to be smaller
+            button.setTextSize(textSize); // Adjusted to be smaller
             button.setTypeface(null, android.graphics.Typeface.BOLD);
             button.setBackgroundColor(Color.parseColor("#fa5936"));
             button.setTextColor(Color.WHITE);
@@ -159,7 +170,7 @@ public class SmallLetterA2ZGameActivity extends AppCompatActivity {
         paramsText.bottomToBottom = ConstraintLayout.LayoutParams.PARENT_ID;
         paramsText.leftToLeft = ConstraintLayout.LayoutParams.PARENT_ID;
         paramsText.rightToRight = ConstraintLayout.LayoutParams.PARENT_ID;
-        paramsText.setMargins(230, 0, 0, margin * 2); // Add margin from the bottom and 20dp margin from the right
+        paramsText.setMargins(290, 0, 0, margin * 2); // Add margin from the bottom and 20dp margin from the right
 
         instructionsText.setLayoutParams(paramsText);
         mainLayout.addView(instructionsText);

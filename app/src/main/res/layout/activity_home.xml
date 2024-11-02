@@ -4,79 +4,82 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/insidegame"
+    android:background="@drawable/homepage"
     android:padding="16dp">
 
-    <!-- ImageView for ambasodor image -->
-    <ImageView
-        android:id="@+id/ambasodorImage"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:src="@drawable/ambasodor"
-        android:scaleType="centerInside"
-        android:alpha="0.5"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4" /> <!-- Horizontal bias shifted to the left -->
-
-    <!-- Welcome Text ("Welcome to") -->
-    <TextView
-        android:id="@+id/welcomeText"
+    <!-- Centered Text and Button Stack -->
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to"
-        android:textSize="36sp"
-        android:textColor="#FFFFFF"
-        android:shadowColor="#000000"
-        android:background="#000000"
-        android:shadowDx="2"
-        android:shadowDy="2"
-        android:shadowRadius="3"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintHorizontal_bias="0.5" />
-
-    <!-- Mind Game Text ("Mind Game") -->
-    <TextView
-        android:id="@+id/mindGameText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="EduFun"
-        android:textSize="44sp"
-        android:shadowColor="#000000"
-        android:shadowDx="2"
-        android:shadowDy="2"
-        android:textColor="#FFFFFF"
-        android:background="#000000"
-        android:shadowRadius="4"
-        android:textStyle="bold"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/welcomeText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintHorizontal_bias="0.5" />
-
-    <!-- Go Inside Button positioned at the bottom -->
-    <Button
-        android:id="@+id/goInsideButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/button_curved"
-        android:letterSpacing="0.2"
-        android:padding="10dp"
-        android:text="START"
-        android:textColor="#FFFFFF"
-        android:textSize="40sp"
-        android:textStyle="bold|italic"
+        android:orientation="vertical"
         android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="16dp" />
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to"
+            android:textSize="36sp"
+            android:textColor="#FFBB33"
+            android:shadowColor="#444444"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="3"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium" />
+
+        <TextView
+            android:id="@+id/mindGameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EduCare"
+            android:textSize="44sp"
+            android:textColor="#FF5722"
+            android:shadowColor="#444444"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/goInsideButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_curved"
+            android:text="START"
+            android:letterSpacing="0.1"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:textStyle="bold|italic"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+
+    <!-- Bird Images for Animation -->
+    <ImageView
+        android:id="@+id/bird1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/bird1"
+        android:visibility="invisible"
+        android:layout_margin="16dp" />
+
+    <ImageView
+        android:id="@+id/bird2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/bird1"
+        android:visibility="invisible"
+        android:layout_margin="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

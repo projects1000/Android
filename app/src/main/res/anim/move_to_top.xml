@@ -1,0 +1,5 @@
+<!-- res/anim/move_to_top.xml -->
+<translate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromYDelta="0%"
+    android:toYDelta="-100%"
+    android:duration="2000"/>

@@ -20,7 +20,7 @@ public class SmallAtoZActivity extends AppCompatActivity {
         Button nextButton = findViewById(R.id.nextButton);
 
         letterText.setText(letters[currentIndex]);
-
+        MusicManager.pauseMusic();
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
