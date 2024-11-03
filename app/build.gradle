@@ -10,8 +10,8 @@ android {
         applicationId "com.game.myapplication01"
         minSdk 24
         targetSdk 34
-        versionCode 25
-        versionName "25"
+        versionCode 28
+        versionName "28"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 

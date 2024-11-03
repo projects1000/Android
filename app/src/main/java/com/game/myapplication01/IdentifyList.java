@@ -73,14 +73,14 @@ public class IdentifyList extends AppCompatActivity {
             }
         });
 
-        Button btnGames = findViewById(R.id.btnGames);
-        btnGames.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(IdentifyList.this, IdentifyGamesActivity.class);
-                startActivity(intent);
-            }
-        });
+//        Button btnGames = findViewById(R.id.btnGames);
+//        btnGames.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(IdentifyList.this, IdentifyGamesActivity.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 
     private void playSound(int soundResourceId) {
