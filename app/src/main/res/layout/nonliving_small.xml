@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border_style"
+    android:padding="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/televisionImage"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:src="@drawable/television"
+            android:contentDescription="Television"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="6dp" />
+
+        <ImageView
+            android:id="@+id/refrigeratorImage"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:src="@drawable/refrigerator"
+            android:contentDescription="Refrigerator"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/televisionImage"
+            android:layout_margin="6dp" />
+
+        <ImageView
+            android:id="@+id/stoveImage"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:src="@drawable/stove"
+            android:contentDescription="Stove"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/refrigeratorImage"
+            android:layout_margin="6dp" />
+
+
+        <ImageView
+            android:id="@+id/bedImage"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:src="@drawable/bed"
+            android:contentDescription="Bed"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/televisionImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="6dp" />
+
+        <ImageView
+            android:id="@+id/chairImage"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:src="@drawable/chair"
+            android:contentDescription="Chair"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/refrigeratorImage"
+            app:layout_constraintStart_toEndOf="@id/bedImage"
+            android:layout_margin="6dp" />
+
+        <ImageView
+            android:id="@+id/tableImage"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:src="@drawable/table"
+            android:contentDescription="Table"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/stoveImage"
+            app:layout_constraintStart_toEndOf="@id/chairImage"
+            android:layout_margin="6dp" />
+
+
+        <ImageView
+            android:id="@+id/microwaveImage"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:src="@drawable/microwave"
+            android:contentDescription="Microwave"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/bedImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="6dp" />
+
+        <ImageView
+            android:id="@+id/fanImage"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:src="@drawable/fan"
+            android:contentDescription="Fan"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/bedImage"
+            app:layout_constraintStart_toEndOf="@id/microwaveImage"
+            android:layout_margin="6dp" />
+
+        <ImageView
+            android:id="@+id/washingmachineImage"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:src="@drawable/washingmachine"
+            android:contentDescription="Washing Machine"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/bedImage"
+            app:layout_constraintStart_toEndOf="@id/fanImage"
+            android:layout_margin="6dp" />
+
+
+        <ImageView
+            android:id="@+id/airconditionerImage"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:src="@drawable/airconditioner"
+            android:contentDescription="Air Conditioner"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/microwaveImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="6dp" />
+
+        <ImageView
+            android:id="@+id/lampImage"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:src="@drawable/lamp"
+            android:contentDescription="Lamp"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/microwaveImage"
+            app:layout_constraintStart_toEndOf="@id/airconditionerImage"
+            android:layout_margin="6dp" />
+
+        <ImageView
+            android:id="@+id/phoneImage"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:layout_margin="6dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="Phone"
+            android:scaleType="centerInside"
+            android:src="@drawable/phone"
+            app:layout_constraintStart_toEndOf="@id/lampImage"
+            app:layout_constraintTop_toBottomOf="@id/microwaveImage" />
+
+        <ImageView
+            android:id="@+id/computerImage"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:src="@drawable/computer"
+            android:contentDescription="Computer"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/airconditionerImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="6dp" />
+
+        <ImageView
+            android:id="@+id/keyboardImage"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:src="@drawable/keyboard"
+            android:contentDescription="Keyboard"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/airconditionerImage"
+            app:layout_constraintStart_toEndOf="@id/computerImage"
+            android:layout_margin="6dp" />
+
+        <ImageView
+            android:id="@+id/mouseImage"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:src="@drawable/mouse"
+            android:contentDescription="Mouse"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/airconditionerImage"
+            app:layout_constraintStart_toEndOf="@id/keyboardImage"
+            android:layout_margin="6dp" />
+
+        <ImageView
+            android:id="@+id/laptopImage"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:src="@drawable/laptop"
+            android:contentDescription="Laptop"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/computerImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="6dp" />
+
+        <ImageView
+            android:id="@+id/carpetImage"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:src="@drawable/carpet"
+            android:contentDescription="Carpet"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/computerImage"
+            app:layout_constraintStart_toEndOf="@id/laptopImage"
+            android:layout_margin="6dp" />
+
+        <ImageView
+            android:id="@+id/mirrorImage"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:src="@drawable/mirror"
+            android:contentDescription="Mirror"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/computerImage"
+            app:layout_constraintStart_toEndOf="@id/carpetImage"
+            android:layout_margin="6dp" />
+
+
+        <ImageView
+            android:id="@+id/clockImage"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:src="@drawable/clock"
+            android:contentDescription="Clock"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/laptopImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="6dp" />
+
+        <ImageView
+            android:id="@+id/bookshelfImage"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:src="@drawable/bookshelf"
+            android:contentDescription="Bookshelf"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/laptopImage"
+            app:layout_constraintStart_toEndOf="@id/clockImage"
+            android:layout_margin="6dp" />
+
+        <ImageView
+            android:id="@+id/curtainImage"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:src="@drawable/curtain"
+            android:contentDescription="Curtain"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/laptopImage"
+            app:layout_constraintStart_toEndOf="@id/bookshelfImage"
+            android:layout_margin="6dp" />
+
+        <ImageView
+            android:id="@+id/drawerImage"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:src="@drawable/drawer"
+            android:contentDescription="Drawer"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/clockImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="6dp" />
+
+        <ImageView
+            android:id="@+id/ironImage"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:src="@drawable/iron"
+            android:contentDescription="Iron"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/clockImage"
+            app:layout_constraintStart_toEndOf="@id/drawerImage"
+            android:layout_margin="6dp" />
+
+        <ImageView
+            android:id="@+id/toasterImage"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:src="@drawable/toaster"
+            android:contentDescription="Toaster"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/clockImage"
+            app:layout_constraintStart_toEndOf="@id/ironImage"
+            android:layout_margin="6dp" />
+
+
+        <ImageView
+            android:id="@+id/blenderImage"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:src="@drawable/blender"
+            android:contentDescription="Blender"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/drawerImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="6dp" />
+
+        <ImageView
+            android:id="@+id/speakerImage"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:src="@drawable/speaker"
+            android:contentDescription="Speaker"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/drawerImage"
+            app:layout_constraintStart_toEndOf="@id/blenderImage"
+            android:layout_margin="6dp" />
+
+        <ImageView
+            android:id="@+id/penImage"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:src="@drawable/pen"
+            android:contentDescription="Pen"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/drawerImage"
+            app:layout_constraintStart_toEndOf="@id/speakerImage"
+            android:layout_margin="6dp" />
+        <ImageView
+            android:id="@+id/bottleImage"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:src="@drawable/bottle"
+            android:contentDescription="Bottle"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/drawerImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="6dp" />
+
+        <ImageView
+            android:id="@+id/cameraImage"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:src="@drawable/camera"
+            android:contentDescription="Camera"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/drawerImage"
+            app:layout_constraintStart_toEndOf="@id/bottleImage"
+            android:layout_margin="6dp" />
+
+        <ImageView
+            android:id="@+id/sofaImage"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:src="@drawable/sofa"
+            android:contentDescription="Sofa"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/drawerImage"
+            app:layout_constraintStart_toEndOf="@id/cameraImage"
+            android:layout_margin="6dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
