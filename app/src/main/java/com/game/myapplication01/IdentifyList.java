@@ -72,6 +72,42 @@ public class IdentifyList extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Button btnVehicles = findViewById(R.id.btnVehicles);
+        btnVehicles.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playSound(R.raw.clickfruits);
+                Intent intent = new Intent(IdentifyList.this, IdentifyVehiclesActivity.class);
+                startActivity(intent);
+            }
+        });
+        Button btnGames = findViewById(R.id.btnGames);
+        btnGames.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playSound(R.raw.clickfruits);
+                Intent intent = new Intent(IdentifyList.this, IdentifyGamesActivity.class);
+                startActivity(intent);
+            }
+        });
+        Button btnMusicalInstruments = findViewById(R.id.btnMusicalInstruments);
+        btnMusicalInstruments.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playSound(R.raw.clickfruits);
+                Intent intent = new Intent(IdentifyList.this, IdentifyMusicalInstrumentsActivity.class);
+                startActivity(intent);
+            }
+        });
+        Button btnCommunity = findViewById(R.id.btnCommunity);
+        btnCommunity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playSound(R.raw.clickfruits);
+                Intent intent = new Intent(IdentifyList.this, IdentifyCommunityActivity.class);
+                startActivity(intent);
+            }
+        });
 
 //        Button btnGames = findViewById(R.id.btnGames);
 //        btnGames.setOnClickListener(new View.OnClickListener() {

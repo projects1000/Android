@@ -24,6 +24,10 @@
         <activity android:name=".IdentifyBirdsActivity" />
         <activity android:name=".IdentifyFlowersActivity" />
         <activity android:name=".IdentifyVegetablesActivity" />
+        <activity android:name=".IdentifyVehiclesActivity" />
+        <activity android:name=".IdentifyNonlivingObjectsActivity" />
+        <activity android:name=".IdentifyMusicalInstrumentsActivity" />
+        <activity android:name=".IdentifyCommunityActivity" />
         <activity android:name=".IdentifyList" />
 
         <!-- A2ZGameActivity declared, but not as the launcher -->
@@ -41,5 +45,7 @@
 
     </application>
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>

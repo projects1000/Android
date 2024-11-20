@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/border_style"
-    android:padding="6dp">
+    android:padding="1dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -13,42 +13,43 @@
 
         <ImageView
             android:id="@+id/footballImage"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
             android:src="@drawable/football"
-        android:contentDescription="Football"
-        android:scaleType="centerInside"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="6dp" />
+            android:contentDescription="Football"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="6dp" />
 
         <ImageView
             android:id="@+id/cricketImage"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
             android:src="@drawable/cricket"
-        android:scaleType="centerInside"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@id/footballImage"
-        android:layout_margin="6dp" />
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/footballImage"
+            android:layout_margin="6dp" />
 
         <ImageView
             android:id="@+id/basketballImage"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
             android:src="@drawable/basketball"
-        android:contentDescription="Basketball"
-        android:scaleType="centerInside"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@id/cricketImage"
-        android:layout_margin="6dp" />
+            android:contentDescription="Basketball"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cricketImage"
+            android:layout_margin="6dp" />
+
 
 
 
         <ImageView
             android:id="@+id/tennisImage"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
             android:src="@drawable/tennis"
             android:contentDescription="Tennis"
             android:scaleType="centerInside"
@@ -58,8 +59,8 @@
 
         <ImageView
             android:id="@+id/hockeyImage"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
             android:src="@drawable/hockey"
             android:contentDescription="Hockey"
             android:scaleType="centerInside"
@@ -69,8 +70,8 @@
 
         <ImageView
             android:id="@+id/boxingImage"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
             android:src="@drawable/boxing"
             android:contentDescription="Boxing"
             android:scaleType="centerInside"
@@ -82,8 +83,8 @@
 
         <ImageView
             android:id="@+id/golfImage"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
             android:src="@drawable/golf"
             android:contentDescription="Golf"
             android:scaleType="centerInside"
@@ -93,8 +94,8 @@
 
         <ImageView
             android:id="@+id/swimmingImage"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
             android:src="@drawable/swimming"
             android:contentDescription="Swimming"
             android:scaleType="centerInside"
@@ -104,8 +105,8 @@
 
         <ImageView
             android:id="@+id/cyclingImage"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
             android:src="@drawable/cycling"
             android:contentDescription="Cycling"
             android:scaleType="centerInside"
@@ -117,8 +118,8 @@
 
         <ImageView
             android:id="@+id/archeryImage"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
             android:src="@drawable/archery"
             android:contentDescription="Archery"
             android:scaleType="centerInside"
@@ -128,8 +129,8 @@
 
         <ImageView
             android:id="@+id/chessImage"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
             android:src="@drawable/chess"
             android:contentDescription="Chess"
             android:scaleType="centerInside"
@@ -139,8 +140,8 @@
 
         <ImageView
             android:id="@+id/tabletennisImage"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
             android:src="@drawable/tabletennis"
             android:contentDescription="Table Tennis"
             android:scaleType="centerInside"
@@ -152,8 +153,8 @@
 
         <ImageView
             android:id="@+id/dartsImage"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
             android:src="@drawable/darts"
             android:contentDescription="Darts"
             android:scaleType="centerInside"
@@ -163,8 +164,8 @@
 
         <ImageView
             android:id="@+id/ludoImage"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
             android:src="@drawable/ludo"
             android:contentDescription="Ludo"
             android:scaleType="centerInside"
@@ -174,8 +175,8 @@
 
         <ImageView
             android:id="@+id/checkersImage"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
             android:src="@drawable/checkers"
             android:contentDescription="Checkers"
             android:scaleType="centerInside"
@@ -187,8 +188,8 @@
 
         <ImageView
             android:id="@+id/monopolyImage"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
             android:src="@drawable/monopoly"
             android:contentDescription="Monopoly"
             android:scaleType="centerInside"
@@ -198,8 +199,8 @@
 
         <ImageView
             android:id="@+id/carromImage"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
             android:src="@drawable/carrom"
             android:contentDescription="Carrom"
             android:scaleType="centerInside"
@@ -209,8 +210,8 @@
 
         <ImageView
             android:id="@+id/billiardsImage"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
             android:src="@drawable/billiards"
             android:contentDescription="Billiards"
             android:scaleType="centerInside"
@@ -222,8 +223,8 @@
 
         <ImageView
             android:id="@+id/bowlingImage"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
             android:src="@drawable/bowling"
             android:contentDescription="Bowling"
             android:scaleType="centerInside"
@@ -233,8 +234,8 @@
 
         <ImageView
             android:id="@+id/wrestlingImage"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
             android:src="@drawable/wrestling"
             android:contentDescription="Wrestling"
             android:scaleType="centerInside"
@@ -244,8 +245,8 @@
 
         <ImageView
             android:id="@+id/khoKhoImage"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
             android:src="@drawable/khokho"
             android:contentDescription="Kho-Kho"
             android:scaleType="centerInside"
@@ -257,8 +258,8 @@
 
         <ImageView
             android:id="@+id/gillidandaImage"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
             android:src="@drawable/gillidanda"
             android:contentDescription="Gilli Danda"
             android:scaleType="centerInside"
@@ -268,8 +269,8 @@
 
         <ImageView
             android:id="@+id/cornholeImage"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
             android:src="@drawable/cornhole"
             android:contentDescription="Cornhole"
             android:scaleType="centerInside"
@@ -279,8 +280,8 @@
 
         <ImageView
             android:id="@+id/tugofwarImage"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
             android:src="@drawable/tugofwar"
             android:contentDescription="Tug of War"
             android:scaleType="centerInside"
@@ -292,8 +293,8 @@
 
         <ImageView
             android:id="@+id/bocceballImage"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
             android:src="@drawable/bocceball"
             android:contentDescription="Bocce Ball"
             android:scaleType="centerInside"
@@ -303,8 +304,8 @@
 
         <ImageView
             android:id="@+id/hopscotchImage"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
             android:src="@drawable/hopscotch"
             android:contentDescription="Hopscotch"
             android:scaleType="centerInside"
@@ -314,8 +315,8 @@
 
         <ImageView
             android:id="@+id/sepaktakrawImage"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
             android:src="@drawable/sepaktakraw"
             android:contentDescription="Sepak Takraw"
             android:scaleType="centerInside"
@@ -327,3 +328,4 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
+
