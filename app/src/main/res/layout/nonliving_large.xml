@@ -319,7 +319,7 @@
             android:src="@drawable/bottle"
             android:contentDescription="Bottle"
             android:scaleType="centerInside"
-            app:layout_constraintTop_toBottomOf="@id/drawerImage"
+            app:layout_constraintTop_toBottomOf="@id/blenderImage"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_margin="6dp" />
 
@@ -330,7 +330,7 @@
             android:src="@drawable/camera"
             android:contentDescription="Camera"
             android:scaleType="centerInside"
-            app:layout_constraintTop_toBottomOf="@id/drawerImage"
+            app:layout_constraintTop_toBottomOf="@id/speakerImage"
             app:layout_constraintStart_toEndOf="@id/bottleImage"
             android:layout_margin="6dp" />
 
@@ -341,7 +341,7 @@
             android:src="@drawable/sofa"
             android:contentDescription="Sofa"
             android:scaleType="centerInside"
-            app:layout_constraintTop_toBottomOf="@id/drawerImage"
+            app:layout_constraintTop_toBottomOf="@id/penImage"
             app:layout_constraintStart_toEndOf="@id/cameraImage"
             android:layout_margin="6dp" />
 

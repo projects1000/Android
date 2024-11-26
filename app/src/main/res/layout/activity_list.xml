@@ -33,7 +33,7 @@
         android:id="@+id/btnIdentifyObjects"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome to the ZOO"
+        android:text="LEARN n FUN World"
         android:textColor="#FFFFFF"
         android:background="@drawable/button_curved"
         android:letterSpacing="0.2"
