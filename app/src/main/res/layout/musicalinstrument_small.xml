@@ -128,11 +128,11 @@
             android:layout_margin="6dp" />
 
         <ImageView
-            android:id="@+id/recorderImage"
+            android:id="@+id/harmoniumImage"
             android:layout_width="106dp"
             android:layout_height="106dp"
-            android:src="@drawable/recorder"
-            android:contentDescription="Recorder"
+            android:src="@drawable/harmonium"
+            android:contentDescription="Harmonium"
             android:scaleType="centerInside"
             app:layout_constraintTop_toBottomOf="@id/glockenspielImage"
             app:layout_constraintStart_toEndOf="@id/harmonicaImage"
@@ -146,7 +146,7 @@
             android:contentDescription="Drum"
             android:scaleType="centerInside"
             app:layout_constraintTop_toBottomOf="@id/glockenspielImage"
-            app:layout_constraintStart_toEndOf="@id/recorderImage"
+            app:layout_constraintStart_toEndOf="@id/harmoniumImage"
             android:layout_margin="6dp" />
 
 

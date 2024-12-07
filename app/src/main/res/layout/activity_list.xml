@@ -29,11 +29,79 @@
         android:shadowDy="1"
         android:fontFamily="ui-monospace"/>
 
+    <!-- Behavioral Button -->
+<!--    <Button-->
+<!--        android:id="@+id/btnBehavioral"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Behavioral"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:background="@drawable/button_curved"-->
+<!--        android:letterSpacing="0.2"-->
+<!--        android:textSize="25sp"-->
+<!--        android:textStyle="bold|italic"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/btnQuiz"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"/>-->
+
+<!--    &lt;!&ndash; Quiz Button &ndash;&gt;-->
+<!--    <Button-->
+<!--        android:id="@+id/btnQuiz"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Quiz"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:background="@drawable/button_curved"-->
+<!--        android:letterSpacing="0.2"-->
+<!--        android:textSize="25sp"-->
+<!--        android:textStyle="bold|italic"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/btnPuzzle"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"/>-->
+
+    <!-- Puzzle Button -->
+    <Button
+        android:id="@+id/btnPuzzle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MISSING LETTER"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_curved"
+        android:letterSpacing="0.2"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+        android:textAllCaps="false"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnIdentifyObjects"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/starMark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="★"
+        android:textColor="#FF0000"
+        android:textSize="30sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="-20dp"
+        app:layout_constraintStart_toStartOf="@+id/btnPuzzle"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPuzzle"
+        app:layout_constraintEnd_toEndOf="@+id/btnPuzzle"
+        app:layout_constraintTop_toTopOf="@+id/btnPuzzle"
+        android:visibility="visible"
+        android:gravity="center"/>
+
+    <!-- LEARN n FUN World Button -->
     <Button
         android:id="@+id/btnIdentifyObjects"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome to the ZOO"
+        android:text="LEARN n FUN World"
         android:textColor="#FFFFFF"
         android:background="@drawable/button_curved"
         android:letterSpacing="0.2"

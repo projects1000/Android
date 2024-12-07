@@ -113,6 +113,7 @@
             android:layout_margin="6dp" />
 
         <!-- Third Row of Vegetables -->
+        <!-- Third Row of Vegetables -->
         <ImageView
             android:id="@+id/onionImage"
             android:layout_width="110dp"

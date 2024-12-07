@@ -4,15 +4,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.speech.tts.TextToSpeech;
+import android.speech.tts.UtteranceProgressListener;
 import android.view.View;
 import android.widget.Button;
-import android.media.MediaPlayer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Locale;
+
 public class IdentifyList extends AppCompatActivity {
 
-    private MediaPlayer mediaPlayer;
+    private TextToSpeech textToSpeech;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,116 +29,91 @@ public class IdentifyList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.idenify_list);
         generateButtons();
-        MusicManager.startMusic(this);
+
+        // Initialize TextToSpeech
+        textToSpeech = new TextToSpeech(this, status -> {
+            if (status == TextToSpeech.SUCCESS) {
+                int langResult = textToSpeech.setLanguage(Locale.US);
+                if (langResult == TextToSpeech.LANG_MISSING_DATA ||
+                        langResult == TextToSpeech.LANG_NOT_SUPPORTED) {
+                    // Handle language not supported
+                }
+            }
+        });
     }
 
     private void generateButtons() {
         Button btnAnimals = findViewById(R.id.btnAnimals);
-        btnAnimals.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Set full-screen mode
-                // Play animal sound and navigate to IdentifyObjectsActivity
-                playSound(R.raw.clickanimal);
-                Intent intent = new Intent(IdentifyList.this, IdentifyObjectsActivity.class);
-                startActivity(intent);
-            }
+        btnAnimals.setOnClickListener(v -> {
+            // Generate voice for button click
+            generateVoice("Click the animals");
+            Intent intent = new Intent(IdentifyList.this, IdentifyObjectsActivity.class);
+            startActivity(intent);
         });
 
         Button btnBirds = findViewById(R.id.btnBirds);
-        btnBirds.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Play bird sound and navigate to IdentifyBirdsActivity
-                playSound(R.raw.clickbirds);
-                Intent intent = new Intent(IdentifyList.this, IdentifyBirdsActivity.class);
-                startActivity(intent);
-            }
+        btnBirds.setOnClickListener(v -> {
+            // Generate voice for button click
+            generateVoice("Click the birds");
+            Intent intent = new Intent(IdentifyList.this, IdentifyBirdsActivity.class);
+            startActivity(intent);
         });
 
         Button btnFlower = findViewById(R.id.btnFlowers);
-        btnFlower.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playSound(R.raw.clickfruits);
-                Intent intent = new Intent(IdentifyList.this, IdentifyFlowersActivity.class);
-                startActivity(intent);
-            }
+        btnFlower.setOnClickListener(v -> {
+            // Generate voice for button click
+            generateVoice("Click the fruits and flowers");
+            Intent intent = new Intent(IdentifyList.this, IdentifyFlowersActivity.class);
+            startActivity(intent);
         });
 
         Button btnVegetables = findViewById(R.id.btnVegetables);
-        btnVegetables.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playSound(R.raw.clickfruits);
-                Intent intent = new Intent(IdentifyList.this, IdentifyVegetablesActivity.class);
-                startActivity(intent);
-            }
-        });
-        Button btnVehicles = findViewById(R.id.btnVehicles);
-        btnVehicles.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playSound(R.raw.clickfruits);
-                Intent intent = new Intent(IdentifyList.this, IdentifyVehiclesActivity.class);
-                startActivity(intent);
-            }
-        });
-        Button btnGames = findViewById(R.id.btnGames);
-        btnGames.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playSound(R.raw.clickfruits);
-                Intent intent = new Intent(IdentifyList.this, IdentifyGamesActivity.class);
-                startActivity(intent);
-            }
-        });
-        Button btnMusicalInstruments = findViewById(R.id.btnMusicalInstruments);
-        btnMusicalInstruments.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playSound(R.raw.clickfruits);
-                Intent intent = new Intent(IdentifyList.this, IdentifyMusicalInstrumentsActivity.class);
-                startActivity(intent);
-            }
-        });
-        Button btnCommunity = findViewById(R.id.btnCommunity);
-        btnCommunity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playSound(R.raw.clickfruits);
-                Intent intent = new Intent(IdentifyList.this, IdentifyCommunityActivity.class);
-                startActivity(intent);
-            }
+        btnVegetables.setOnClickListener(v -> {
+            generateVoice("Click the vegetables");
+            Intent intent = new Intent(IdentifyList.this, IdentifyVegetablesActivity.class);
+            startActivity(intent);
         });
 
-//        Button btnGames = findViewById(R.id.btnGames);
-//        btnGames.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(IdentifyList.this, IdentifyGamesActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+        Button btnVehicles = findViewById(R.id.btnVehicles);
+        btnVehicles.setOnClickListener(v -> {
+            generateVoice("Click the vehicles");
+            Intent intent = new Intent(IdentifyList.this, IdentifyVehiclesActivity.class);
+            startActivity(intent);
+        });
+
+        Button btnNonLivingObjects = findViewById(R.id.btnNonLivingObjects);
+        btnNonLivingObjects.setOnClickListener(v -> {
+            generateVoice("Click the non-living objects");
+            Intent intent = new Intent(IdentifyList.this, IdentifyNonlivingObjectsActivity.class);
+            startActivity(intent);
+        });
+
+        Button btnGames = findViewById(R.id.btnGames);
+        btnGames.setOnClickListener(v -> {
+            generateVoice("Click the games");
+            Intent intent = new Intent(IdentifyList.this, IdentifyGamesActivity.class);
+            startActivity(intent);
+        });
+
+        Button btnMusicalInstruments = findViewById(R.id.btnMusicalInstruments);
+        btnMusicalInstruments.setOnClickListener(v -> {
+            generateVoice("Click the musical instruments");
+            Intent intent = new Intent(IdentifyList.this, IdentifyMusicalInstrumentsActivity.class);
+            startActivity(intent);
+        });
+
+        Button btnCommunity = findViewById(R.id.btnCommunity);
+        btnCommunity.setOnClickListener(v -> {
+            generateVoice("Click the community");
+            Intent intent = new Intent(IdentifyList.this, IdentifyCommunityActivity.class);
+            startActivity(intent);
+        });
     }
 
-    private void playSound(int soundResourceId) {
-        // Release any previous MediaPlayer instance
-        if (mediaPlayer != null) {
-            mediaPlayer.release();
+    private void generateVoice(String text) {
+        if (textToSpeech != null) {
+            textToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, null, null);
         }
-
-        // Initialize the MediaPlayer with the selected sound
-        mediaPlayer = MediaPlayer.create(this, soundResourceId);
-        mediaPlayer.start();
-
-        // Release resources when playback is complete
-        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mp) {
-                mp.release();
-            }
-        });
     }
 
     @Override
@@ -144,26 +122,22 @@ public class IdentifyList extends AppCompatActivity {
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
             // Code to execute after the delay
             MusicManager.startMusic(this);
-        }, 1000); // 500 ms delay (0.5 seconds)
+        }, 1000); // 1-second delay (you can adjust as needed)
     }
-
 
     @Override
     protected void onPause() {
         super.onPause();
-        // Pause the music when the activity is paused
-//        if (mediaPlayer != null && mediaPlayer.isPlaying()) {
-//            mediaPlayer.pause();
-//        }
         MusicManager.pauseMusic(); // Pause music when app goes to background
     }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
-//        if (mediaPlayer != null) {
-//            mediaPlayer.stop();
-//            mediaPlayer.release();
-//        }
-        MusicManager.stopMusic(); // Stop the music only when the app closes completely
+        if (textToSpeech != null) {
+            textToSpeech.stop();
+            textToSpeech.shutdown();
+        }
+        MusicManager.stopMusic(); // Stop the music when the app is destroyed
     }
 }

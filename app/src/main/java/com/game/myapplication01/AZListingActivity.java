@@ -7,6 +7,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.speech.tts.TextToSpeech;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.View;
@@ -21,9 +22,10 @@ import androidx.constraintlayout.widget.ConstraintSet;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 
 public class AZListingActivity extends AppCompatActivity {
-
+    private TextToSpeech textToSpeech;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,9 +40,51 @@ public class AZListingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list);
         generateButtons();
         MusicManager.startMusic(this);
+
+        textToSpeech = new TextToSpeech(this, status -> {
+            if (status == TextToSpeech.SUCCESS) {
+                int langResult = textToSpeech.setLanguage(Locale.US);
+                if (langResult == TextToSpeech.LANG_MISSING_DATA || langResult == TextToSpeech.LANG_NOT_SUPPORTED) {
+                    // Handle missing data or unsupported language
+                } else {
+                    // TextToSpeech is initialized and ready to use, now you can proceed
+                }
+            } else {
+                // Handle initialization failure (e.g., show a toast or log the error)
+            }
+        });
     }
     private void generateButtons() {
 
+//        Button btnBehavioral = findViewById(R.id.btnBehavioral);
+//        btnBehavioral.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(AZListingActivity.this, BehavioralActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//
+//        Button quizButton = findViewById(R.id.btnQuiz);
+//        quizButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(AZListingActivity.this, QuizActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+
+        Button puzzleButton = findViewById(R.id.btnPuzzle);
+        puzzleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent intent = new Intent(AZListingActivity.this, PuzzleActivity.class);
+                generateVoice("Click the missing letter for dog");
+                startActivity(intent);
+            }
+        });
         Button identifyObjectsLetterButton = findViewById(R.id.btnIdentifyObjects);
         identifyObjectsLetterButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,7 +130,11 @@ public class AZListingActivity extends AppCompatActivity {
 //        }
         MusicManager.pauseMusic();
     }
-
+    private void generateVoice(String text) {
+        if (textToSpeech != null) {
+            textToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, null, null);
+        }
+    }
     @Override
     protected void onResume() {
         super.onResume();
