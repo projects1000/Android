@@ -252,9 +252,7 @@ public class PuzzleActivity extends AppCompatActivity {
             letterButton.setBackgroundResource(R.drawable.button_style);
 
             letterButton.setOnClickListener(v -> {
-                // Disable the button once it's clicked
-                letterButton.setEnabled(false);
-
+                // If the clicked letter is correct, disable all the letter buttons
                 if (letter.equals(missingLetter)) {
                     // Replace the underscore with the correct letter
                     String updatedWord = buttonDisplayedWord.getText().toString().replace("_", letter);
@@ -289,9 +287,15 @@ public class PuzzleActivity extends AppCompatActivity {
                     // Generate the voice with spaced letters and the full word at the end
                     generateVoice(formattedPrompt.toString());
 
+                    // Disable all buttons now that the user has clicked the correct letter
+                    for (int i = 0; i < lettersLayout.getChildCount(); i++) {
+                        Button letterBtn = (Button) lettersLayout.getChildAt(i);
+                        letterBtn.setEnabled(false); // Disable all buttons
+                    }
+
                     currentWordIndex++;
 
-                    // Delay to show the next game (2 seconds delay)
+                    // Delay to show the next game (3 seconds delay)
                     new Handler().postDelayed(this::setupGame, 3000); // Wait 3 seconds before showing the next game
                 } else {
                     // Incorrect letter handling
@@ -307,9 +311,6 @@ public class PuzzleActivity extends AppCompatActivity {
                     generateVoice("Incorrect, try again!");
                 }
             });
-
-
-
 
             lettersLayout.addView(letterButton);
         }
