@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainBallSortingLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/innerbg"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/gameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ball Sorting"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textColor="#FF0000"
+        android:layout_marginBottom="24dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/tube1"
+                android:layout_width="0dp"
+                android:layout_height="320dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="@drawable/tube_bg"
+                android:gravity="center_horizontal|bottom"
+                android:layout_margin="8dp" />
+
+            <LinearLayout
+                android:id="@+id/tube2"
+                android:layout_width="0dp"
+                android:layout_height="320dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="@drawable/tube_bg"
+                android:gravity="center_horizontal|bottom"
+                android:layout_margin="8dp" />
+
+            <LinearLayout
+                android:id="@+id/tube3"
+                android:layout_width="0dp"
+                android:layout_height="320dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="@drawable/tube_bg"
+                android:gravity="center_horizontal|bottom"
+                android:layout_margin="8dp" />
+
+            <LinearLayout
+                android:id="@+id/tube4"
+                android:layout_width="0dp"
+                android:layout_height="320dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="@drawable/tube_bg"
+                android:gravity="center_horizontal|bottom"
+                android:layout_margin="8dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/tube5"
+                android:layout_width="0dp"
+                android:layout_height="320dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="@drawable/tube_bg"
+                android:gravity="center_horizontal|bottom"
+                android:layout_margin="8dp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tap a tube to pick/drop a ball!"
+        android:textColor="#333"
+        android:layout_marginTop="32dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

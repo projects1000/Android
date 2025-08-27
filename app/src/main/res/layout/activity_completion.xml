@@ -8,6 +8,8 @@
     android:padding="16dp">
 
     <TextView
+        android:id="@+id/tvCongratulations"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Congratulations! You've completed the game!"
@@ -26,7 +28,7 @@
         android:textSize="20sp"
         android:textColor="#FFFFFF"
         android:background="#8B4513"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@id/tvCongratulations"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="20dp"/>

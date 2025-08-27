@@ -45,6 +45,8 @@
         <activity
             android:name=".ErrorActivity"
             android:exported="false" />
+        <activity android:name=".GameSelectionActivity" />
+        <activity android:name=".BallSortingGameActivity" />
 
     </application>
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />

@@ -63,6 +63,23 @@
 <!--        app:layout_constraintEnd_toEndOf="parent"-->
 <!--        app:layout_constraintStart_toStartOf="parent"/>-->
 
+    <!-- Games Button -->
+    <Button
+        android:id="@+id/btnGames"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Games"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_curved"
+        android:letterSpacing="0.2"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+        android:textAllCaps="false"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnPuzzle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
     <!-- Puzzle Button -->
     <Button
         android:id="@+id/btnPuzzle"

@@ -121,6 +121,14 @@ public class AZListingActivity extends AppCompatActivity {
             }
         });
 
+        Button gamesButton = findViewById(R.id.btnGames);
+        gamesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AZListingActivity.this, GameSelectionActivity.class);
+                startActivity(intent);
+            }
+        });
     }
     @Override
     protected void onPause() {

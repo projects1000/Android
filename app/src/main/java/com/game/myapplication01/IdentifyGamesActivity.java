@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.util.DisplayMetrics;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -25,25 +26,13 @@ public class IdentifyGamesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_identify_games);
 
-        // Set full-screen mode
-        getWindow().getDecorView().setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_LAYOUT_STABLE |
-                        View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION |
-                        View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN |
-                        View.SYSTEM_UI_FLAG_HIDE_NAVIGATION |
-                        View.SYSTEM_UI_FLAG_FULLSCREEN |
-                        View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
-
-        DisplayMetrics displayMetrics = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-        int screenWidth = displayMetrics.widthPixels;
-
-        if (screenWidth <= 720) { // Small screens
-            setContentView(R.layout.games_small);
-        } else { // Large screens
-            setContentView(R.layout.games_large);
-        }
+        // Set up Game buttons
+        findViewById(R.id.btnGame1).setOnClickListener(v -> handleGameClick(1));
+        findViewById(R.id.btnGame2).setOnClickListener(v -> handleGameClick(2));
+        findViewById(R.id.btnGame3).setOnClickListener(v -> handleGameClick(3));
+        findViewById(R.id.btnGame4).setOnClickListener(v -> handleGameClick(4));
 
         // Initialize Text-to-Speech
         textToSpeech = new TextToSpeech(this, status -> {
@@ -184,6 +173,21 @@ public class IdentifyGamesActivity extends AppCompatActivity {
 
         dialog.show();
         return dialog;
+    }
+
+    private void handleGameClick(int gameNumber) {
+        // TODO: Implement what should happen when each game button is clicked
+        // For now, just speak the game number
+        if (textToSpeech == null) {
+            textToSpeech = new TextToSpeech(this, status -> {
+                if (status == TextToSpeech.SUCCESS) {
+                    textToSpeech.setLanguage(Locale.US);
+                    textToSpeech.speak("Game " + gameNumber, TextToSpeech.QUEUE_FLUSH, null, null);
+                }
+            });
+        } else {
+            textToSpeech.speak("Game " + gameNumber, TextToSpeech.QUEUE_FLUSH, null, null);
+        }
     }
 
     @Override
