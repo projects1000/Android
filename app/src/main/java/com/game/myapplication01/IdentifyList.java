@@ -91,7 +91,7 @@ public class IdentifyList extends AppCompatActivity {
         Button btnGames = findViewById(R.id.btnGames);
         btnGames.setOnClickListener(v -> {
             generateVoice("Click the games");
-            Intent intent = new Intent(IdentifyList.this, IdentifyGamesActivity.class);
+            Intent intent = new Intent(IdentifyList.this, GameSelectionActivity.class);
             startActivity(intent);
         });
 

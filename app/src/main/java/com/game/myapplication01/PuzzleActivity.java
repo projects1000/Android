@@ -117,7 +117,7 @@ public class PuzzleActivity extends AppCompatActivity {
         // Set the button text size based on screen size
         if (screenWidth <= 720) {  // Small screens
             buttonTextSize = 22f;
-            buttonWidth = 105;  // Width in pixels
+            buttonWidth = 107;  // Width in pixels
             buttonHeight = 100;  // Height in pixels
             margin  =15;
         } else {  // Large screens
